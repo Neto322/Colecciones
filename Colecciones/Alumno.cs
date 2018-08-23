@@ -12,11 +12,11 @@ namespace Colecciones
         public string Matricula { get; set; }
 
   
-        public List<Materia> Materias { get; set; }
+        public List<Materia> lista { get; set; }
 
         public Alumno()
         {
-            Materias = new List<Materia>();
+            lista = new List<Materia>();
         }
 
 

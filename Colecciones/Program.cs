@@ -25,27 +25,30 @@ namespace Colecciones
             matematicas.Nombre = "Matematicas";
             matematicas.Identificador = "MT12358";
 
-            alumno.Materias.Add(new Materia());
-            alumno.Materias.Add(matematicas);
+            alumno.lista.Add(new Materia());
+            alumno.lista.Add(matematicas);
 
-            alumno.Materias[0].Nombre = "Historia";
-            alumno.Materias[0].Identificador = "HT96465";
+            alumno.lista[0].Nombre = "Historia";
+            alumno.lista[0].Identificador = "HT96465";
 
-            alumno.Materias.Add(new Materia());
-            alumno.Materias[2].Nombre = "Español";
-            alumno.Materias[2].Identificador = "ES852";
-
+            alumno.lista.Add(new Materia());
+            alumno.lista[2].Nombre = "Español";
+            alumno.lista[2].Identificador = "ES852";
+            
             //alumno.Materias.RemoveAt(1);
             //alumno.Materias.RemoveAt(1);
             //alumno.Materias.Clear();
             Console.WriteLine("Alumno: " + alumno.Nombre);
-            Console.WriteLine("Numero de materias: " + alumno.Materias.Count);
-            Console.WriteLine("Materia" + Descrip);
+            Console.WriteLine("Numero de materias: " + alumno.lista.Count);
 
             foreach (Alumno Nombre in Descrip)
             {
+
                 Console.WriteLine("Nombre: " + Nombre.Nombre);
-               //alumno.Materias[i].Nombre
+                foreach (Materia materia in alumno.lista)
+                {
+                    Console.WriteLine("Materia: " + materia.Nombre);
+                }
             }
             Console.ReadLine();
             
